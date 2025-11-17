@@ -1,6 +1,5 @@
 require("dotenv").config();
 const express = require("express");
-const path = require("path");
 const configViewEngine = require("./config/viewEngine");
 const webRoutes = require("./routes/web");
 const app = express();
@@ -10,6 +9,7 @@ const hostname = process.env.HOST_NAME;
 // config static file
 configViewEngine(app);
 // khai báo routes
+
 app.use(webRoutes);
 app.listen(port, hostname, () => {
   console.log(`Example app listen on port ${port}`);

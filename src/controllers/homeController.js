@@ -1,9 +1,8 @@
+const connection = require("../config/database");
 const getHomePage = (req, res) => {
-  // process data
-  // call model
-  res.send("Hello World vs Hùng Mạnh and NodeMon");
+  return res.render("home.ejs");
 };
 const getImages = (req, res) => {
   res.render("sample.ejs");
 };
-module.exports = { getHomePage, getImages };
+module.exports = {getHomePage, getImages};
