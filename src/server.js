@@ -5,11 +5,12 @@ const webRoutes = require("./routes/web");
 const app = express();
 const port = process.env.PORT || 8080;
 const hostname = process.env.HOST_NAME;
-
-// config static file
+//  config req.body
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+// config view engine
 configViewEngine(app);
 // khai báo routes
-
 app.use(webRoutes);
 app.listen(port, hostname, () => {
   console.log(`Example app listen on port ${port}`);

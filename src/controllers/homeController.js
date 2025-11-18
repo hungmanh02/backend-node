@@ -5,4 +5,8 @@ const getHomePage = (req, res) => {
 const getImages = (req, res) => {
   res.render("sample.ejs");
 };
-module.exports = {getHomePage, getImages};
+const postCreateUser = (req, res) => {
+  console.log(req.body);
+  res.send("create new user");
+};
+module.exports = { getHomePage, getImages, postCreateUser };
