@@ -14,7 +14,6 @@
       <a href="/get-add">Add Users</a>
     </div>
     <div class="content-table">
-      <%= JSON.stringify(listUsers) %>
       <h2>Lists Users</h2>
       <table>
         <tr>
@@ -24,16 +23,18 @@
           <th>City</th>
           <th>Action</th>
         </tr>
+        <% listUsers.forEach((user)=>{%>
         <tr>
-          <td>Peter</td>
-          <td>Griffin</td>
-          <td>$100</td>
-          <td>$100</td>
+          <td><%= user.id %></td>
+          <td><%= user.email %></td>
+          <td><%= user.name %></td>
+          <td><%= user.city %></td>
           <td>
             <button>Edit</button>
             <button>Delete</button>
           </td>
         </tr>
+        <%}) %>
       </table>
     </div>
   </body>
