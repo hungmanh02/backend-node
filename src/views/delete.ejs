@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create add users</title>
+    <link rel="stylesheet" href="../css/nav.css" />
+    <link rel="stylesheet" href="../css/styles.css" />
+  </head>
+  <body>
+    <div class="topnav">
+      <a href="/">Home</a>
+      <a class="active" href="/get-add">Create Users</a>
+    </div>
+    <div class="form-add-new">
+      <form action="/delete-user" method="post">
+        <fieldset>
+          <legend>Delete user</legend>
+          <input type="hidden" name="id" value="<%= deleteUser.id %>" />
+          <div class="input-group">
+            <label for="">Are you sure to delete this user with Email:</label>
+            <input
+              type="text"
+              name="email"
+              value="<%= deleteUser.email %>"
+              id="email"
+              disabled
+            />
+          </div>
+
+          <div>
+            <button>Confirm</button>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+  </body>
+</html>
